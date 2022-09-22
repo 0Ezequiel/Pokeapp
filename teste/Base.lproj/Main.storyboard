@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4i0-KU-mht">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pokeapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PIKACHU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="817-aT-MbV">
+                                <rect key="frame" x="161.66666666666666" y="118" width="104.99999999999997" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Myb-By-ccj">
+                                <rect key="frame" x="87" y="191" width="254" height="254"/>
+                                <color key="backgroundColor" systemColor="tintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="254" id="Lk5-0k-Taz"/>
+                                    <constraint firstAttribute="width" constant="254" id="fvG-T1-aO9"/>
+                                </constraints>
+                            </imageView>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="FQP-a9-nbW">
+                                <rect key="frame" x="87" y="462" width="94" height="32"/>
+                                <connections>
+                                    <action selector="npPokemon:" destination="BYZ-38-t0r" eventType="valueChanged" id="J7N-ef-AHo"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokémon ID: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EA0-8p-QTE">
+                                <rect key="frame" x="233" y="468" width="108" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EA0-8p-QTE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FQP-a9-nbW" secondAttribute="trailing" constant="8" symbolic="YES" id="0ef-7b-nuw"/>
+                            <constraint firstItem="Myb-By-ccj" firstAttribute="top" secondItem="817-aT-MbV" secondAttribute="bottom" constant="44" id="7Xf-cH-KJB"/>
+                            <constraint firstItem="Myb-By-ccj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CSk-PR-rcV"/>
+                            <constraint firstItem="EA0-8p-QTE" firstAttribute="top" secondItem="Myb-By-ccj" secondAttribute="bottom" constant="23" id="Hg8-XV-tG3"/>
+                            <constraint firstItem="FQP-a9-nbW" firstAttribute="top" secondItem="Myb-By-ccj" secondAttribute="bottom" constant="17" id="LSV-UT-XSu"/>
+                            <constraint firstItem="FQP-a9-nbW" firstAttribute="leading" secondItem="Myb-By-ccj" secondAttribute="leading" id="MER-X4-QU4"/>
+                            <constraint firstItem="817-aT-MbV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hTl-4A-7lV"/>
+                            <constraint firstItem="817-aT-MbV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="qRI-CB-ytx"/>
+                            <constraint firstItem="EA0-8p-QTE" firstAttribute="trailing" secondItem="Myb-By-ccj" secondAttribute="trailing" id="xfO-Fp-hEV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ODn-dX-LJe"/>
+                    <connections>
+                        <outlet property="image" destination="Myb-By-ccj" id="0a7-Wr-J0Q"/>
+                        <outlet property="label" destination="EA0-8p-QTE" id="Wzw-l8-Oix"/>
+                        <outlet property="name" destination="817-aT-MbV" id="To5-pM-czV"/>
+                        <outlet property="nextPreview" destination="FQP-a9-nbW" id="trL-cZ-iKa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="746" y="84"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jTf-k9-bdD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4i0-KU-mht" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="npy-Eo-QvE">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="s0E-N2-QrO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qCc-BE-EYg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
